@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<title>K-Wallet Bank</title>
+<link rel="icon" href="imgs/logo2.png" type="image/ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!--Bootstrap 4.1 version files-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('imgs/bnk.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+     <a href="login2.php"><img src="logo2.png" height=90 width=90></a>
+  </div>
+  <div class="w3-display-middle">
+  <center><img src="imgs/banks.png" height=140 width=140 id="backg"><br>
+  <img src="imgs/bankmove.gif" height=110 width=400>
+    <h1 class="w3-jumbo w3-animate-top" id="cs">COMING SOON..</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%"><br><br>
+    <font face="Calibri" size=6><div id="timer"></div></font></center>
+	
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Powered by <a href="login2.php">K-Wallet</a>
+  </div>
+  <br><br><br>
+</div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 10, 2018 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+    var now = new Date().getTime();
+     var distance = countDownDate - now;
+    //alert(distance);
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    
+    document.getElementById("timer").innerHTML = days+"d: "+hours + "h: "
+    + minutes + "m: " + seconds + "s";
+    
+    
+    if (distance < 0 && seconds>(-10)) {
+        
+        document.getElementById("timer").innerHTML = "<button class='btn btn-lg btn-primary'>Register Now</button>";
+		document.getElementById("cs").innerHTML = "Welcome to K-Bank";//clearInterval(x);
+		$(".bgimg").css("background-image","url('imgs/back2.gif')");
+    }
+	if (seconds<=(-10)) {
+	clearInterval(x);
+        document.getElementById("timer").innerHTML = "<font color=#ff0000 size=6>Registeration Closed</font>";
+		document.getElementById("cs").innerHTML = "Welcome to K-Bank";
+		$(".bgimg").css("background-image","url('imgs/back2.gif')");
+    }
+}, 1000);
+</script>
+</body>
+</html>

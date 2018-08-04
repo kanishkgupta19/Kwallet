@@ -1,0 +1,11 @@
+<form action="registered.php" method="POST">
+<label class="string optional control-label" for="contact_first_name">Name</label><input  type="text" name="Name" id="Name" ></div>
+<div class="form-group string optional contact_last_name">
+<label class="string optional control-label" for="contact_last_name">Phone Number</label><input type="number" name="contact" id="Contact" /></div><div class="form-group email optional contact_email"><label class="email optional control-label" for="contact_email">Email</label><input data-field-for="email" class="string email optional form-control" type="email" name="contact[email]" id="email" required /></div><div class="form-group string optional contact_phone_number"><label class="string optional control-label" for="contact_phone_number">State</label><input data-field-for="phone_number" class="string optional form-control" type="text" name="state" id="state" /></div><div class="form-group string optional contact_subject"><label class="string optional control-label" for="contact_subject">Create Password</label><input data-field-for="subject" class="string optional form-control" type="password"  id="password" required /></div><input type="hidden" name="resource_id" id="resource_id" value="5a999cc45e5cac33663efaa1" /><div class="form-group honey string contact_customer"><input type="text" name="customer" id="customer" value="" class="honey" /></div>
+<div class="checkbox">
+    <label>
+      <input type="checkbox" required >I Agree to terms and conditions.
+    </label>
+  </div><br>
+  <h4><input class="btn btn-success" type="submit" value="Create Account"></h4>
+  </form>

@@ -1,0 +1,17 @@
+<div class="row">
+
+<DIV class="col-md-3">
+  <div class="w3-panel w3-round-xxlarge w3-blue w3-padding-32">
+    <center><h2><font color="black">Name </font><br> <b><?php echo $_SESSION["KName"]; ?></b></h2></center>
+  </div></div>
+  
+  <DIV class="col-md-3">
+  <div class="w3-panel w3-round-xxlarge w3-blue w3-padding-32">
+    <center><h2><font color="black">K-Wallet Balance</font> <br><b>₹<?php echo $_SESSION["Kcash"]; ?></b></h2></center>
+  </div></div>
+  
+  <DIV class="col-md-3">
+  <div class="w3-panel w3-round-xxlarge w3-blue w3-padding-32">
+    <center><h2><font color="black">K-Wallet User ID </font><br> <b><?php echo $_SESSION["KwalletUserID"]; ?></b></h2></center>
+  </div></div>
+  </div><!--ROW-->
